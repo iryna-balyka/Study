@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Mentor extends Person implements Staff{
     private boolean mood;
-    private Random random;
+    Random random = new Random();
 
     public Mentor(String name, int age) {
         super(name, age);
@@ -18,15 +18,12 @@ public class Mentor extends Person implements Staff{
     }
 
     boolean checkCode(Task task){
-        Random random = new Random();
-
-
-        if (random.nextInt() > 1000) {
+        if (random.nextInt(2000) > 1000) {
             System.out.println("Задача принята");
             return true;
         }
         else {
-            System.out.println("Задание номер " + task + "не принято");
+            System.out.println("Задание номер " + task.number + "не принято");
             return false;}
     }
 }

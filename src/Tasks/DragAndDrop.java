@@ -10,6 +10,7 @@ public class DragAndDrop extends Task implements Autochecked{
 
     @Override
     public boolean checkAutomatically() {
-
+        System.out.println("Задание выполнено");
+        return true;
     }
 }
