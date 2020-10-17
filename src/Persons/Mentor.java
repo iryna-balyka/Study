@@ -17,6 +17,14 @@ public class Mentor extends Person implements Staff{
         System.out.println(student.getName() + ", у вас все хорошо получается");
     }
 
+    @Override
+    public String toString() {
+        return "Mentor{" +
+                "mood=" + mood +
+                ", random=" + random +
+                '}';
+    }
+
     boolean checkCode(Task task){
         if (random.nextInt(2000) > 1000) {
             System.out.println("Задача принята");
